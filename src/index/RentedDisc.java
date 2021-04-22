@@ -1,13 +1,19 @@
 package index;
 
+import Exception.InvalidDurationException;
+
 public class RentedDisc extends DisqueRental {
 	//Attributes
 	private int dureeLocation;
 	
 	//Constructors
-	public RentedDisc(String username, float prixLocation, int dureeLocation) {
+	public RentedDisc(String username, float prixLocation, int dureeLocation) throws InvalidDurationException{
 		super(username, prixLocation);
-		this.dureeLocation=dureeLocation;
+		if(dureeLocation<0) {
+			throw new InvalidDurationException();
+		}else {
+			this.dureeLocation=dureeLocation;
+		}	
 	}
 	//Methods
 	/*
