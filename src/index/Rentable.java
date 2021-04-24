@@ -13,7 +13,6 @@ public interface Rentable {
 	/*
 	 * Objet pouvant être emprunté
 	 */
-	void rent(String name);
-	
+	public void rent(String name);
 	
 }

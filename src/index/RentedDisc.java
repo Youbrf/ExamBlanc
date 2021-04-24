@@ -12,7 +12,11 @@ public class RentedDisc extends DisqueRental {
 		if(dureeLocation<0) {
 			throw new InvalidDurationException();
 		}else {
-			this.dureeLocation=dureeLocation;
+			if(dureeLocation==0) {
+				this.dureeLocation=DEFAULT_DURATION;
+			}else {
+				this.dureeLocation=dureeLocation;
+			}
 		}	
 	}
 	//Methods
@@ -29,13 +33,18 @@ public class RentedDisc extends DisqueRental {
 		return prixTotal;
 	}
 	@Override
+	public void rent(String name) {
+		setUsername(name);
+	}
+
+
+	//toString
+		@Override
 	public String toString() {
 		return "-- Nom = " + getUsername() 
 				+"\n-- Prix de la location = " + getPrixLocation()+" €" 
 				+"\n-- duree de la Location = " + dureeLocation 
 				+"\n-- Prix total = " + calculerPrixTotal()+" €";
 	}
-
-	//toString
-	
+		
 }

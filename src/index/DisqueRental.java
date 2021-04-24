@@ -29,9 +29,8 @@ public abstract class DisqueRental extends Disque implements Rentable {
 	public String getUsername() {
 		return username;
 	}
-
 	public void setUsername(String username) {
-		this.username = username;
+		this.username=username;
 	}
 
 	public void setPrixLocation(float prixLocation) {
@@ -40,8 +39,7 @@ public abstract class DisqueRental extends Disque implements Rentable {
 
 	//Methods
 	@Override
-	public void rent(String name) {
-		this.username=name;
-	}
+	public abstract void rent(String name);
+	
 
 }
