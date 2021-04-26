@@ -19,19 +19,25 @@ public class RentedDisc extends DisqueRental {
 			}
 		}	
 	}
+	//Getteurs and Setteurs
+	public int getDureeLocation() {
+		return dureeLocation;
+	}
+
 	//Methods
 	/*
 	 * Permet de calculer le prix total de la location en fonction du prix ( prixLocation )
 	 */
 	public float calculerPrixTotal() {
 		float prixTotal;
-		if(dureeLocation == 0 ) {
-			prixTotal = getPrixLocation()*DEFAULT_DURATION;
-		}else {
+//		if(dureeLocation == 0 ) {
+//			prixTotal = getPrixLocation()*DEFAULT_DURATION;
+//		}else {
 			prixTotal = getPrixLocation()*dureeLocation;
-		}
+//		}
 		return prixTotal;
 	}
+	
 	@Override
 	public void rent(String name) {
 		setUsername(name);

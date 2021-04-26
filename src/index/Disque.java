@@ -10,6 +10,13 @@ public class Disque {
 	private ArrayList<Chansons> disque;
 	
 	/*
+	 * Getteurs and Setteurs
+	 */
+	public ArrayList<Chansons> getDisque() {
+		return disque;
+	}
+
+	/*
 	 * Constructeur d'un disque avec le nom du disque en parametre
 	 */
 	public Disque() {

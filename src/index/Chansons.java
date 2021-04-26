@@ -15,6 +15,19 @@ public class Chansons implements Comparable<Chansons>{
 	private float prixLocation;
 	
 	/*
+	 * Getteurs and Setteurs
+	 */
+	public String getChanteur() {
+		return chanteur;
+	}
+	public String getTitre() {
+		return titre;
+	}
+	public float getPrixLocation() {
+		return prixLocation;
+	}
+	
+	/*
 	 * Constructeur d'une chanson
 	 */
 	public Chansons(String chanteur,String titre,float prixLocation) {
@@ -22,6 +35,7 @@ public class Chansons implements Comparable<Chansons>{
 		this.titre=titre;
 		this.prixLocation=prixLocation;
 	}
+	
 	/*
 	 * Méthode de comparaison
 	 */
